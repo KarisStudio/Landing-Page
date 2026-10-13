@@ -7,3 +7,22 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+@font-face {
+    font-family: 'Sloop Script Pro';
+    src: url('/fonts/SloopScriptPro.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amoresa';
+    src: url('/fonts/Amoresa.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@theme {
+    --font-sloop: 'Sloop Script Pro', cursive;
+    --font-amoresa: 'Amoresa', cursive;
+}
