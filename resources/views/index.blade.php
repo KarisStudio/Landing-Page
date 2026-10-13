@@ -1,27 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karis Roblox Studio</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Inter & FontAwesome for icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        body {
-            background-color: #fff5f7; /* Soft light pink background */
-        }
-    </style>
-</head>
-<body>
-    <x-navbar />
-    <x-hero-section />
-    <x-about-section />
-    <x-project-section />
-    <x-news-section />
-    <x-footer />
-</body>
-</html>
+@extends('layouts.app')
+
+@section('title', 'Karis Studio - Roblox Development Agency')
+
+@section('content')
+  <main>
+    <!-- Hero Section -->
+    @include('components.hero-section')
+
+    <!-- About Section -->
+    @include('components.about-section')
+
+    <!-- Project Showcase Section -->
+    @include('components.project-section')
+
+    <!-- News Section -->
+    @include('components.news-section')
+
+    <!-- Community Section -->
+    @include('components.community-section')
+
+  </main>
+@endsection
