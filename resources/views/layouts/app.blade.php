@@ -14,6 +14,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Allura&family=Baloo+2:wght@400;500;600;700;800&family=Great+Vibes&family=Raleway:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="{{ asset('js/project-modal.js') }}"></script>
 
   <style id="karis-intro-animation">
   #karis-intro {
@@ -76,13 +80,9 @@
             body: ['Raleway', 'sans-serif'],
           },
           boxShadow: {
-
             'soft': '0 10px 25px -5px rgba(38, 159, 154, 0.1), 0 8px 10px -6px rgba(246, 187, 213, 0.1)',
-
             'card': '0 8px 20px rgba(38, 159, 154, 0.08)',
-
             'button': '0 4px 14px rgba(38, 159, 154, 0.3)',
-
           }
         }
       }

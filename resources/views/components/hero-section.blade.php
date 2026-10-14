@@ -339,7 +339,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
       <!-- Hero Text -->
-      <div class="lg:col-span-7 text-center lg:text-left">
+      <div class="lg:col-span-7 text-center md:text-center lg:text-left">
         <div
           class="inline-flex items-center gap-2 bg-cotton-candy/60 border border-pastel-pink text-deep-teal px-4 py-1.5 rounded-full font-heading text-sm font-semibold mb-6 shadow-sm">
           <span>Welcome to</span>
@@ -353,7 +353,7 @@
           </span>
         </h1>
 
-        <p class="text-base sm:text-lg text-slate-600 mb-8 max-w-2xl font-medium leading-relaxed">
+        <p class="text-base sm:text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
           Bring your ideas to life on Roblox! We help you create high-quality, creative Roblox games, maps, and
           experiences tailored to your vision.
         </p>

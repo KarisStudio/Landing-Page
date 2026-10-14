@@ -50,6 +50,8 @@
         </a>
       </div>
       <div class="community-bottom-note"><span class="community-note-icon"><i data-lucide="heart-handshake" class="w-5 h-5"></i></span><span><strong><a href="https://karis.info" target="_blank" rel="noopener noreferrer">https://karis.info</a></strong><small>Connect, share ideas, and create with Karis Studio.</small></span><span class="community-note-sparkle">✦</span></div>
+    </div>
+    <div class="community-bottom-note"><span class="community-note-icon"><i data-lucide="clipboard-list" class="w-5 h-5"></i></span><span><strong><a href="https://karis.info" target="_blank" rel="noopener noreferrer">https://karis.booking</a></strong><small>Tell us your idea, and let’s bring it to life with Karis Studio.</small></span><span class="community-note-sparkle">✦</span></div>
       <p class="text-center text-xs text-slate-400 mt-5">Note: replace the example URLs in the <code>href</code> attributes with your official community links.</p>
     </div>
 </section>

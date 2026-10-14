@@ -21,7 +21,7 @@ class ContactController extends Controller
             'preferred_time' => 'nullable|date_format:H:i',
         ]);
 
-        $webhookUrl = env('DISCORD_WEBHOOK_URL');
+        $webhookUrl = config('services.discord.webhook_url');
 
         if (!$webhookUrl) {
             return back()->with('error', 'URL Discord Webhook belum dikonfigurasi di file .env!');
