@@ -80,7 +80,7 @@
                     <!-- Company name & Type of inquiry -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">Company name *</label>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Company name</label>
                             <input type="text" name="company_name" placeholder="PT/Universitas"
                                 class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-teal-500 transition placeholder-slate-300 font-['Raleway']">
                         </div>
@@ -99,7 +99,7 @@
 
                     <!-- Estimated budget -->
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Estimated budget *</label>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Estimated budget</label>
                         <select name="budget"
                             class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs text-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500 transition font-['Raleway'] bg-white">
                             <option value="" disabled selected>Select your estimated budget</option>
@@ -112,7 +112,7 @@
 
                     <!-- Project detail -->
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Project detail *</label>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Project detail</label>
                         <textarea name="project_detail" rows="4"
                             placeholder="Tell us about your vision, target audience, or game references"
                             class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-teal-500 transition placeholder-slate-300 font-['Raleway']"></textarea>
