@@ -358,12 +358,12 @@
           experiences tailored to your vision.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-          <a href="#news"
+          <a href="{{ route('contact.index') }}"
             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-pastel-pink hover:bg-soft-blush text-white font-heading text-lg px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
             <i data-lucide="newspaper" class="w-5 h-5"></i>
             Contact Us &rarr;
           </a>
-          <a href="#projects"
+          <a href="{{ route('projects.index') }}"
             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/80 hover:bg-white text-deep-teal border-2 border-mint-green font-heading text-lg px-8 py-3.5 rounded-full shadow-sm hover:shadow transition-all">
             <i data-lucide="eye" class="w-5 h-5"></i>
             View Our Portfolio
