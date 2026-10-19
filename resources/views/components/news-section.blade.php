@@ -200,6 +200,10 @@
         <p class="text-slate-600 font-medium mt-2 max-w-2xl">Updates, behind-the-scenes stories, announcements, and tips
           from Karis Studio.</p>
       </div>
+      <a href="{{ route('news.index') }}" class="inline-flex items-center gap-2 mt-4 md:mt-0 px-6 py-3 rounded-full bg-white border border-pink-500/30 text-pink-700 font-bold text-sm shadow-sm hover:shadow-md hover:shadow-pink-500/20 transition-all duration-300 group">
+        View More 
+        <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+      </a>
     </div>
     <!-- NEWS MANAGEMENT: Tambah/edit artikel dengan menyalin satu blok <article class="news-card">. Ubah gambar, kategori, tanggal, judul, ringkasan, dan tautan. -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
