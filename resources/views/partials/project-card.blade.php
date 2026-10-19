@@ -4,7 +4,7 @@
     <div class="relative aspect-square rounded-[1.75rem] overflow-hidden bg-slate-100">
         <img src="{{ asset($project['image'][0] ?? $project['images'][0] ?? 'images/default.jpg') }}" alt="{{ $project['title'] }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
         
-        <div class="absolute inset-0 bg-gradient-to-t from-teal-950/85 via-teal-900/30 to-teal-900/0 p-5 flex flex-col justify-between">
+        <div class="absolute inset-0 bg-linear-to-t from-teal-950/85 via-teal-900/30 to-teal-900/0 p-5 flex flex-col justify-between">
             <div class="flex justify-between items-start">
                 <span class="text-[10px] font-bold text-white/80 bg-black/20 backdrop-blur-md px-2.5 py-1 rounded-full">{{ $project['id'] }}</span>
                 <div class="w-8 h-8 rounded-full bg-white/90 text-[#23a099] flex items-center justify-center shadow-md group-hover:bg-[#23a099] group-hover:text-white transition">
