@@ -93,9 +93,9 @@
                                 class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs text-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500 transition font-['Raleway'] bg-white">
                                 <option value="" disabled selected>How can we help?</option>
                                 <option value="Full Game Development">Full Game Development</option>
-                                <option value="Map & Building Design">Map & Building Design</option>
-                                <option value="Scripting & Systems">Scripting & Systems</option>
-                                <option value="UI/UX Design">UI/UX Design</option>
+                                <option value="In-Game Integration / Virtual Boot">In-Game Integration / Virtual Booth</option>
+                                <option value="Partnership & Collaboration">Partnership & Collaboration</option>
+                                <option value="General Inquiry">General Inqury</option>
                             </select>
                         </div>
                     </div>
@@ -106,9 +106,10 @@
                         <select name="budget" required
                             class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs text-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500 transition font-['Raleway'] bg-white">
                             <option value="" disabled selected>Select your estimated budget</option>
-                            <option value="Below Rp 5.000.000">Below Rp 5.000.000</option>
-                            <option value="Rp 5.000.000 - Rp 15.000.000">Rp 5.000.000 - Rp 15.000.000</option>
-                            <option value="Above Rp 15.000.000">Above Rp 15.000.000</option>
+                            <option value="Below Rp 10.000.000">Below Rp 5.000.000</option>
+                            <option value="Rp 10.000.000 - Rp 50.000.000">Rp 5.000.000 - Rp 15.000.000</option>
+                            <option value="Above Rp 50.000.000">Above Rp 15.000.000</option>
+                            <option value="Pending further discussion.">Pending further discussion.</option>
                         </select>
                     </div>
 
