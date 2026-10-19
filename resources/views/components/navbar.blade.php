@@ -41,8 +41,8 @@
     </div>
   </div>
 
-  <!-- Laci Menu Mobile -->
-  <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 space-y-2 bg-white/95 backdrop-blur-md border-b border-gray-200 relative z-50 shadow-lg">
+  <!-- Laci Menu Mobile (Default style.display = 'none') -->
+  <div id="mobile-menu" style="display: none;" class="md:hidden px-4 pt-2 pb-6 space-y-2 bg-white/95 backdrop-blur-md border-b border-gray-200 relative z-50 shadow-lg">
     <a href="{{ route('index') }}#about" class="block px-3 py-2 rounded-md text-base font-medium text-[#2F7F7F] hover:bg-gray-100">
       About</a>
     <a href="{{ route('projects.index') }}" class="block px-3 py-2 rounded-md text-base font-medium text-[#2F7F7F] hover:bg-gray-100">
@@ -60,7 +60,6 @@
 
 </header>
 
-<!-- Pastikan Script ini berada di bawah kode di atas (atau di dalam file layout utama sebelum penutup </body>) -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const menuBtn = document.getElementById('menu-btn');
@@ -70,9 +69,16 @@
 
     if (menuBtn && mobileMenu) {
       menuBtn.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-        menuIconOpen.classList.toggle('hidden');
-        menuIconClose.classList.toggle('hidden');
+        // Toggle langsung menggunakan inline style display agar transisi muncul/hilangnya instan dan pasti
+        if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+          mobileMenu.style.display = 'block';
+          menuIconOpen.classList.add('hidden');
+          menuIconClose.classList.remove('hidden');
+        } else {
+          mobileMenu.style.display = 'none';
+          menuIconOpen.classList.remove('hidden');
+          menuIconClose.classList.add('hidden');
+        }
       });
     }
   });
