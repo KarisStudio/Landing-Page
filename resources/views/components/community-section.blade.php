@@ -29,7 +29,7 @@
             Tell us your idea, and let&rsquo;s bring it to life with Karis Studio.
         </p>
         <a class="relative isolate animate-[contactBob_4s_ease-in-out_infinite] z-10 inline-flex items-center justify-center gap-3 px-10 py-6 rounded-full font-heading text-2xl sm:text-3xl font-bold text-white shadow-xl transition-all hover:-translate-y-2 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-pink-200 before:content-[''] before:absolute before:inset-[-9px] before:border before:border-[rgba(36,107,107,.23)] before:rounded-full before:pointer-events-none before:transition-[inset,border-color] before:duration-250 after:content-[''] after:absolute after:inset-[-17px] after:border after:border-dashed after:border-[rgba(217,120,168,.38)] after:rounded-full after:pointer-events-none after:animate-[contactSpin_24s_linear_infinite] hover:saturate-[1.12] hover:-translate-y-[5px] hover:scale-[1.035] hover:before:inset-[-13px] hover:before:border-[rgba(0,179,164,.55)] max-sm:px-7 max-sm:py-5 max-sm:text-[23px]"
-            href="booking.html"
+            href="{{ route('contact.index') }}"
             style="background:linear-gradient(180deg,#f5a6ba 0%,#abe5d1 100%) !important;background-image:linear-gradient(180deg,#f5a6ba 0%,#abe5d1 100%) !important;box-shadow:0 4px 13px rgba(245,166,186,.25);text-decoration:none">
             <i class="w-7 h-7" data-lucide="mail">
             </i>
