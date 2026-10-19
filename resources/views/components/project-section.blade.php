@@ -713,9 +713,9 @@
         <h2 class="font-heading text-3xl sm:text-4xl font-bold text-deep-teal mb-2">Projects</h2>
         <p class="text-slate-600 font-medium font-['Baloo_2']">A showcase of the best work created by Karis Studio</p>
       </div>
-      <a href="./projects" class="inline-flex items-center gap-2 mt-4 md:mt-0 px-6 py-3 rounded-full bg-white border border-teal-500/20 text-deep-teal font-bold text-sm shadow-sm hover:shadow-md transition-all duration-300 group">
+      <a href="{{ route('projects.index') }}" class="inline-flex items-center gap-2 mt-4 md:mt-0 px-6 py-3 rounded-full bg-white border border-pink-500/30 text-pink-700 font-bold text-sm shadow-sm hover:shadow-md hover:shadow-pink-500/20 transition-all duration-300 group">
         View More 
-        <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+      <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
       </a>
     </div>
 
