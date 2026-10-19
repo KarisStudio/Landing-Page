@@ -25,7 +25,7 @@
             <div class="text-center mb-6 sm:mb-8">
                 <span
                     class="inline-block bg-[#d2f3ed] text-[#23a099] text-[9px] sm:text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2.5 font-['Raleway']">
-                    KARIS STUDIO · BOOKING
+                    KARIS STUDIO Â· BOOKING
                 </span>
                 <h1
                     class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight font-['Baloo_2'] leading-tight">
@@ -37,32 +37,29 @@
                 </p>
             </div>
 
-            <!-- Alert Notifications (Fallback jika tidak pakai AJAX) -->
-            <div id="alert-container">
-                @if (session('success'))
-                    <div data-alert
-                        class="mb-5 p-3.5 sm:p-4 bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-2xl text-xs font-medium flex items-center justify-between shadow-sm">
-                        <span>{{ session('success') }}</span>
-                        <button type="button" onclick="this.parentElement.remove()"
-                            class="font-bold text-emerald-500 ml-3">&times;</button>
-                    </div>
-                @endif
+            <!-- Alert Notifications -->
+            @if (session('success'))
+                <div data-alert
+                    class="mb-5 p-3.5 sm:p-4 bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-2xl text-xs font-medium flex items-center justify-between shadow-sm">
+                    <span>{{ session('success') }}</span>
+                    <button type="button" onclick="this.parentElement.remove()"
+                        class="font-bold text-emerald-500 ml-3">&times;</button>
+                </div>
+            @endif
 
-                @if (session('error'))
-                    <div data-alert
-                        class="mb-5 p-3.5 sm:p-4 bg-rose-50 border border-rose-200 text-rose-700 rounded-2xl text-xs font-medium flex items-center justify-between shadow-sm">
-                        <span>{{ session('error') }}</span>
-                        <button type="button" onclick="this.parentElement.remove()"
-                            class="font-bold text-rose-500 ml-3">&times;</button>
-                    </div>
-                @endif
-            </div>
+            @if (session('error'))
+                <div data-alert
+                    class="mb-5 p-3.5 sm:p-4 bg-rose-50 border border-rose-200 text-rose-700 rounded-2xl text-xs font-medium flex items-center justify-between shadow-sm">
+                    <span>{{ session('error') }}</span>
+                    <button type="button" onclick="this.parentElement.remove()"
+                        class="font-bold text-rose-500 ml-3">&times;</button>
+                </div>
+            @endif
 
             <!-- Form Card -->
             <div
                 class="bg-white/80 backdrop-blur-md p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg border border-pink-100/60">
                 <form id="contact-form" action="{{ route('contact.send') }}" method="POST"
-                    onsubmit="sendToDiscordAjax(event)"
                     class="space-y-4 sm:space-y-5 font-['Raleway']">
                     @csrf
 
@@ -83,7 +80,7 @@
                     <!-- Company name & Type of inquiry -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">Company name <span class="text-slate-400 font-normal">(optional)</span></label>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Company name *</label>
                             <input type="text" name="company_name" placeholder="PT/Universitas"
                                 class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-teal-500 transition placeholder-slate-300 font-['Raleway']">
                         </div>
@@ -93,29 +90,29 @@
                                 class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs text-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500 transition font-['Raleway'] bg-white">
                                 <option value="" disabled selected>How can we help?</option>
                                 <option value="Full Game Development">Full Game Development</option>
-                                <option value="In-Game Integration / Virtual Boot">In-Game Integration / Virtual Booth</option>
+                                <option value="In-Game Integration / Virtual Booth">In-Game Integration / Virtual Booth</option>
                                 <option value="Partnership & Collaboration">Partnership & Collaboration</option>
-                                <option value="General Inquiry">General Inqury</option>
+                                <option value="General Inquiry">General Inquiry</option>
                             </select>
                         </div>
                     </div>
 
                     <!-- Estimated budget -->
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Estimated budget <span class="text-slate-400 font-normal">(optional)</span></label>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Estimated budget *</label>
                         <select name="budget"
                             class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs text-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500 transition font-['Raleway'] bg-white">
                             <option value="" disabled selected>Select your estimated budget</option>
                             <option value="Below Rp 10.000.000">Below Rp 5.000.000</option>
                             <option value="Rp 10.000.000 - Rp 50.000.000">Rp 5.000.000 - Rp 15.000.000</option>
                             <option value="Above Rp 50.000.000">Above Rp 15.000.000</option>
-                            <option value="Pending further discussion.">Pending further discussion.</option>
+                            <option value="Pending further discussion.">Above Rp 15.000.000</option>
                         </select>
                     </div>
 
                     <!-- Project detail -->
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Project detail <span class="text-slate-400 font-normal">(optional)</span></label>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Project detail *</label>
                         <textarea name="project_detail" rows="4"
                             placeholder="Tell us about your vision, target audience, or game references"
                             class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-teal-500 transition placeholder-slate-300 font-['Raleway']"></textarea>
@@ -157,47 +154,16 @@
                     </div>
 
                     <p class="text-[10px] text-slate-400 text-center leading-tight mt-3 font-['Raleway'] px-2">
-                        When you submit, your data will be sent directly to the Karis Studio team via Discord.
+                        When you submit, your email app will open with your booking details filled in. Your message will not
+                        be sent until you press Send in your email app.
                     </p>
                 </form>
             </div>
 
             <!-- Copyright Footnote -->
             <div class="text-center mt-6 text-[10px] text-slate-400">
-                © Karis Studio · karis.info
+                Â© Karis Studio Â· karis.info
             </div>
         </div>
     </section>
-
-    <!-- Script AJAX untuk Debugging langsung ke Console Browser (F12) -->
-    <script>
-    async function sendToDiscordAjax(event) {
-        event.preventDefault();
-
-        const form = document.getElementById('contact-form');
-        const formData = new FormData(form);
-        const submitBtn = document.getElementById('submit-btn');
-        const btnText = document.getElementById('btn-text');
-        const alertContainer = document.getElementById('alert-container');
-
-        // Ubah tombol jadi loading state
-        btnText.innerText = 'Sending to Discord...';
-        submitBtn.disabled = true;
-
-        try {
-            const response = await fetch("{{ route('contact.send') }}", {
-                method: 'POST',
-                headers: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
-                    'Accept': 'application/json'
-                },
-                body: formData
-            });
-
-            const result = await response.json();
-
-            // CEK HASILNYA LANGSUNG DI CONSOLE BROWSER (Tekan F12)
-            console.log("=== DISCORD WEBHOOK RESPONSE ===", result);
-
-            if (response.ok && result.success) {
-                // Muncul
+@endsection
