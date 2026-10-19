@@ -76,7 +76,7 @@
    <a class="text-[clamp(13px,1.15vw,21px)] text-[#62416d] no-underline transition-colors duration-200 hover:text-[#d3449a] max-lg:text-[13px] max-sm:text-[12px]" href="#projects">
     Our Projects
    </a>
-   <a class="text-[clamp(13px,1.15vw,21px)] text-[#62416d] no-underline transition-colors duration-200 hover:text-[#d3449a] max-lg:text-[13px] max-sm:text-[12px]" href="hiring.html">
+   <a class="text-[clamp(13px,1.15vw,21px)] text-[#62416d] no-underline transition-colors duration-200 hover:text-[#d3449a] max-lg:text-[13px] max-sm:text-[12px]" href="{{ route('hiring.index') }}">
     Careers / Hiring
    </a>
   </div>
