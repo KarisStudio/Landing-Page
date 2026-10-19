@@ -1,0 +1,41 @@
+[
+    {
+        "id": "01",
+        "title": "CLEVO WORLD",
+        "category": "SIMULATOR",
+        "images": [
+            "images/projects/clevo-world/coba-karis.png",
+            "images/projects/clevo-world/coba-karis-2.jpeg",
+            "images/projects/clevo-world/coba-karis-3.webp"
+        ],
+        "description": "An immersive Roblox simulator game created for Clevo, featuring interactive quests, custom 3D assets, and engaging progression systems.",
+        "client": "Clevo Indonesia",
+        "date": "2024"
+    },
+    {
+        "id": "02",
+        "title": "ISLAND EXPLORER",
+        "category": "MAP & BUILDING",
+        "images": [
+            "images/projects/clevo-world/coba-karis.png",
+            "images/projects/clevo-world/coba-karis-2.jpeg",
+            "images/projects/clevo-world/coba-karis-3.webp"
+        ],
+        "description": "Detailed tropical environment map design for high-capacity Roblox servers with optimized mesh and lighting.",
+        "client": "Karis Studio",
+        "date": "2024"  
+    },
+    {
+        "id": "03",
+        "title": "PET TYCOON UI",
+        "category": "UI/UX DESIGN",
+        "images": [
+            "images/projects/clevo-world/coba-karis.png",
+            "images/projects/clevo-world/coba-karis-2.jpeg",
+            "images/projects/clevo-world/coba-karis-3.webp"
+        ],
+        "description": "Playful, modern UI system built for a pet tycoon game including shop interface, HUD, inventory system, and daily rewards popup.",
+        "client": "Private Client",
+        "date": "2023"
+    }
+]
