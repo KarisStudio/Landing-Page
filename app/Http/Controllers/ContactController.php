@@ -64,7 +64,7 @@ class ContactController extends Controller
                         ],
                         [
                             'name'   => 'Estimated Budget',
-                            'value'  => !empty($validated['budget']) ?: 'Belum ditentukan',
+                            'value'  => !empty($validated['budget']) ?: 'Pending further discussion.',
                             'inline' => true,
                         ],
                         [
