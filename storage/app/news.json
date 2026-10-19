@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "category": "TIPS",
+        "date": "6 Okt 2026",
+        "title": "Tips for Creating a Roblox Experience",
+        "subtitle": "Tips and insights for creating Roblox experiences.",
+        "content": "Share guides, practical steps, or lessons learned from the team's experience. You can manually add subheadings, images, lists, and other links directly in the HTML file.",
+        "link": "https://roblox.com"
+    },
+    {
+        "id": 2,
+        "category": "ARTICLE",
+        "date": "10 Okt 2026",
+        "title": "Optimizing UI Layouts for Mobile Games",
+        "subtitle": "Best practices for clean and responsive user interfaces.",
+        "content": "Learn how to design clean, accessible, and intuitive UI components tailored for smaller screens without sacrificing visual quality or functionality.",
+        "link": "https://devforum.roblox.com"
+    }
+]
