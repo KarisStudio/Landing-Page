@@ -54,7 +54,7 @@ class ContactController extends Controller
                         ],
                         [
                             'name'   => 'Company Name',
-                            'value'  => $validated['company_name'] ?: '-',
+                            'value'  => !empty($validated['company_name']) ?: '-',
                             'inline' => true,
                         ],
                         [
@@ -64,7 +64,7 @@ class ContactController extends Controller
                         ],
                         [
                             'name'   => 'Estimated Budget',
-                            'value'  => $validated['budget'] ?: 'Belum ditentukan',
+                            'value'  => !empty($validated['budget']) ?: 'Belum ditentukan',
                             'inline' => true,
                         ],
                         [
@@ -79,7 +79,7 @@ class ContactController extends Controller
                         ],
                         [
                             'name'   => 'Project Details',
-                            'value'  => $validated['project_detail'] ?: '-',
+                            'value'  => !empty($validated['project_detail']) ?: '-',
                             'inline' => false,
                         ],
                     ],
