@@ -58,7 +58,7 @@
     display: inline-block;
     position: relative;
     padding-bottom: 14px;
-    background: linear-gradient(100deg, #287d7a, #d76eaa 52%, #62bdb0);
+    background: #a5185f;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent
@@ -148,10 +148,11 @@
   #news .news-card h3 {
     line-height: 1.25;
     transition: color .25s ease
+    color: #a5185f
   }
 
   #news .news-card:hover h3 {
-    color: #d16fa7
+    color: #a5185f
   }
 
   #news .news-card .p-6>a:last-child {

@@ -1,57 +1,92 @@
-<style id="karis-community-creative-style">
-    #community.karis-community-creative{isolation:isolate;background:linear-gradient(145deg,#fff9fd 0%,#f1fff8 52%,#f4f7ff 100%)!important;border-radius:46px;}
-    #community.karis-community-creative::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(rgba(244,167,199,.28) 1.5px,transparent 1.8px),radial-gradient(rgba(0,179,164,.18) 1.5px,transparent 1.8px);background-size:28px 28px,37px 37px;background-position:0 0,13px 17px;mask-image:linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent)}
-    #community .community-orb{position:absolute;z-index:-1;border-radius:50%;pointer-events:none;filter:blur(1px)}#community .community-orb-one{width:290px;height:290px;left:-115px;top:18%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.95),rgba(239,167,199,.26) 35%,rgba(239,167,199,0) 72%)}#community .community-orb-two{width:360px;height:360px;right:-150px;bottom:0;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.95),rgba(168,229,209,.36) 38%,rgba(168,229,209,0) 72%)}
-    #community .community-eyebrow{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;border:1px solid rgba(255,255,255,.95);border-radius:999px;background:rgba(255,255,255,.72);color:#246b6b;font-size:11px;font-weight:800;letter-spacing:.15em;box-shadow:0 8px 25px rgba(36,107,107,.07);backdrop-filter:blur(14px)}#community .community-live-dot{width:8px;height:8px;border-radius:50%;background:#00b3a4;box-shadow:0 0 0 4px rgba(0,179,164,.12)}
-    #community .community-script{color:#d978a8;font-style:italic;white-space:nowrap}#community .community-mini-bubbles{display:flex;justify-content:center;align-items:center;gap:15px;margin-top:22px;color:#e59abb;font-size:17px}#community .community-mini-bubbles span:nth-child(even){color:#70cbb5;font-size:23px}
-    #community .community-link-grid{align-items:stretch}#community a.community-link{position:relative;display:flex;min-height:285px;overflow:hidden;flex-direction:column;align-items:flex-start;gap:13px;padding:25px;border-radius:28px!important;border:1px solid rgba(255,255,255,.96)!important;background:rgba(255,255,255,.76)!important;box-shadow:0 12px 38px rgba(36,107,107,.07),inset 0 1px rgba(255,255,255,.9)!important;text-decoration:none;backdrop-filter:blur(16px);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
-    #community a.community-link::before{content:"";position:absolute;width:190px;height:190px;right:-75px;top:-82px;border-radius:50%;background:var(--community-glow,rgba(244,167,199,.20));transition:transform .35s ease;pointer-events:none}#community a.community-link:hover{transform:translateY(-8px)!important;box-shadow:0 24px 52px rgba(36,107,107,.14)!important;border-color:rgba(0,179,164,.30)!important}#community a.community-link:hover::before{transform:scale(1.3)}
-    #community .community-discord{--community-glow:rgba(88,101,242,.16)}#community .community-roblox{--community-glow:rgba(0,179,164,.18)}#community .community-tiktok{--community-glow:rgba(37,244,238,.18)}#community .community-card-top{width:100%;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}#community .community-icon{display:flex;width:56px;height:56px;align-items:center;justify-content:center;border-radius:19px;box-shadow:inset 0 1px rgba(255,255,255,.9)}#community .discord-icon{background:#5865f218;color:#5865f2}#community .roblox-icon{background:#00b3a418;color:#246b6b}#community .tiktok-icon{background:linear-gradient(135deg,rgba(37,244,238,.16),rgba(254,44,85,.13));color:#111827}#community .community-external{display:flex;width:36px;height:36px;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.85);color:#246b6b;transition:transform .25s ease}#community a:hover .community-external{transform:rotate(45deg)}
-    #community .community-platform{font-size:10px;font-weight:800;letter-spacing:.17em;color:#8a9a9c;position:relative;z-index:1}#community .community-card-title{font-family:'Baloo 2',sans-serif;font-size:25px;line-height:1.15;color:#246b6b;position:relative;z-index:1}#community .community-card-title span{color:#d978a8}#community .community-card-description{font-size:13px;line-height:1.75;color:#68777b;max-width:290px;position:relative;z-index:1}#community .community-card-action{display:flex;align-items:center;gap:9px;margin-top:auto;padding-top:8px;font-size:12px;font-weight:800;color:#246b6b;position:relative;z-index:1}#community .community-card-action svg{transition:transform .2s ease}#community a:hover .community-card-action svg{transform:translateX(4px)}#community .community-card-decoration{position:absolute;right:18px;bottom:8px;font-size:70px;line-height:1;color:rgba(36,107,107,.055);pointer-events:none}
-    #community .community-bottom-note{display:flex;align-items:center;gap:14px;max-width:680px;margin:30px auto 0;padding:16px 20px;border:1px solid rgba(255,255,255,.95);border-radius:22px;background:rgba(255,255,255,.68);box-shadow:0 8px 28px rgba(36,107,107,.05);backdrop-filter:blur(12px)}#community .community-note-icon{display:flex;width:42px;height:42px;flex-shrink:0;align-items:center;justify-content:center;border-radius:15px;background:#a8e5d14d;color:#246b6b}#community .community-bottom-note strong,#community .community-bottom-note small{display:block}#community .community-bottom-note strong{font-family:'Baloo 2',sans-serif;color:#246b6b;font-size:15px}#community .community-bottom-note small{color:#78878a;font-size:12px;margin-top:2px}#community .community-note-sparkle{margin-left:auto;color:#e59abb;font-size:25px}
-    @media(max-width:640px){#community.karis-community-creative{border-radius:30px}#community a.community-link{min-height:255px;padding:22px}#community .community-card-title{font-size:23px}#community .community-bottom-note{align-items:flex-start;padding:14px}#community .community-bottom-note small{line-height:1.6}}
-    @media(prefers-reduced-motion:reduce){#community a.community-link,#community a.community-link::before,#community .community-external{transition:none!important}}
-</style>
+<section id="contact"
+    class="relative overflow-hidden isolate py-24 sm:py-28 bg-[linear-gradient(180deg,#fff8fc_0%,#effcf8_48%,#f5f2ff_100%)] before:content-[''] before:absolute before:inset-0 before:-z-10 before:pointer-events-none before:bg-[radial-gradient(rgba(217,120,168,.25)_1.3px,transparent_1.6px),radial-gradient(rgba(0,169,157,.2)_1.3px,transparent_1.6px)] before:bg-[length:30px_30px,42px_42px] before:bg-[position:0_0,14px_18px] before:[mask-image:linear-gradient(transparent,#000_18%,#000_82%,transparent)] max-sm:py-20">
+    <div aria-hidden="true"
+        class="absolute -z-10 rounded-full blur-[4px] pointer-events-none w-[340px] h-[340px] -left-[100px] top-[5%] bg-[radial-gradient(circle,rgba(249,168,212,.45),transparent_70%)]">
+    </div>
+    <div aria-hidden="true"
+        class="absolute -z-10 rounded-full blur-[4px] pointer-events-none w-[390px] h-[390px] -right-[130px] -bottom-[5%] bg-[radial-gradient(circle,rgba(168,229,209,.5),transparent_70%)]">
+    </div>
+    <span aria-hidden="true"
+        class="absolute pointer-events-none animate-[contactDrift_5s_ease-in-out_infinite] left-[20%] top-[24%] text-[29px] text-[#d978a8] max-sm:left-[7%] max-sm:top-[18%]">
+        ✦
+    </span>
+    <span aria-hidden="true"
+        class="absolute pointer-events-none animate-[contactDrift_5s_ease-in-out_infinite] [animation-delay:-2s] right-[21%] top-[28%] text-[34px] text-[#55b9a7] max-sm:right-[7%] max-sm:top-[23%]">
+        ✧
+    </span>
+    <span aria-hidden="true"
+        class="absolute pointer-events-none animate-[contactDrift_5s_ease-in-out_infinite] [animation-delay:-3s] left-[25%] bottom-[22%] text-[14px] text-[#e9a6c7] max-sm:left-[10%] max-sm:bottom-[16%]">
+        ●
+    </span>
+    <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+        <div
+            class="inline-flex items-center gap-[9px] px-[15px] py-[9px] border border-[rgba(255,255,255,.95)] rounded-full bg-[rgba(255,255,255,.68)] shadow-[0_8px_24px_rgba(36,107,107,.06)] text-[10px] font-extrabold tracking-[0.16em] text-[#528482] backdrop-blur-[12px]">
+            <span class="w-[7px] h-[7px] rounded-full bg-[#00b3a4] shadow-[0_0_0_4px_rgba(0,179,164,.13)]">
+            </span>
+            LET&rsquo;S MAKE SOMETHING AMAZING
+        </div>
+        <p class="max-w-[500px] mx-auto mb-[30px] text-[#6d8181] text-[14px] leading-[1.8] max-sm:text-[13px]">
+            Tell us your idea, and let&rsquo;s bring it to life with Karis Studio.
+        </p>
+        <a class="relative isolate animate-[contactBob_4s_ease-in-out_infinite] z-10 inline-flex items-center justify-center gap-3 px-10 py-6 rounded-full font-heading text-2xl sm:text-3xl font-bold text-white shadow-xl transition-all hover:-translate-y-2 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-pink-200 before:content-[''] before:absolute before:inset-[-9px] before:border before:border-[rgba(36,107,107,.23)] before:rounded-full before:pointer-events-none before:transition-[inset,border-color] before:duration-250 after:content-[''] after:absolute after:inset-[-17px] after:border after:border-dashed after:border-[rgba(217,120,168,.38)] after:rounded-full after:pointer-events-none after:animate-[contactSpin_24s_linear_infinite] hover:saturate-[1.12] hover:-translate-y-[5px] hover:scale-[1.035] hover:before:inset-[-13px] hover:before:border-[rgba(0,179,164,.55)] max-sm:px-7 max-sm:py-5 max-sm:text-[23px]"
+            href="booking.html"
+            style="background:linear-gradient(180deg,#f5a6ba 0%,#abe5d1 100%) !important;background-image:linear-gradient(180deg,#f5a6ba 0%,#abe5d1 100%) !important;box-shadow:0 4px 13px rgba(245,166,186,.25);text-decoration:none">
+            <i class="w-7 h-7" data-lucide="mail">
+            </i>
+            Contact Us
+            <i class="w-6 h-6" data-lucide="arrow-up-right">
+            </i>
+        </a>
+        <div
+            class="flex items-center justify-center gap-[10px] mt-[28px] text-[#7d9693] text-[11px] font-bold tracking-[0.04em] [&>span]:text-[#d978a8]">
+            <span>
+                ✦
+            </span>
+            Click the bubble to start your booking
+            <span>
+                ✦
+            </span>
+        </div>
+    </div>
+    <style>
+        @keyframes contactBob {
 
-<section id="community" class="py-24 relative overflow-hidden karis-community-creative">
-    <div class="community-orb community-orb-one" aria-hidden="true"></div>
-    <div class="community-orb community-orb-two" aria-hidden="true"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="community-heading max-w-3xl mx-auto text-center mb-12">
-        <span class="community-eyebrow"><span class="community-live-dot"></span><i data-lucide="sparkles" class="w-4 h-4"></i> KARIS STUDIO • COMMUNITY HUB</span>
-        <h2 class="font-heading text-3xl sm:text-5xl font-bold text-deep-teal mt-5">Let’s Connect <span class="community-script">Together!</span></h2>
-        <p class="text-slate-600 font-medium mt-4 max-w-2xl mx-auto">One studio, many ways to connect. Choose your favorite channel and grow with the Karis Studio community.</p>
-        <div class="community-mini-bubbles" aria-hidden="true"><span>✦</span><span>○</span><span>✧</span><span>○</span><span>✦</span></div>
-      </div>
-      <div class="community-link-grid grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-auto">
-        <a href="https://www.instagram.com/karis.community/" target="_blank" rel="noopener noreferrer" class="community-link community-instagram group">
-          <span class="community-card-top"><span class="community-icon instagram-icon" aria-label="Logo Instagram"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span><span class="community-external"><i data-lucide="arrow-up-right" class="w-5 h-5"></i></span></span>
-          <span class="community-platform">FOLLOW • CONNECT</span>
-          <strong class="community-card-title">Instagram <span>Community</span></strong>
-          <span class="community-card-description">Follow @karis.community for the latest updates, studio activities, project previews, and moments from Karis Studio.</span>
-          <span class="community-card-action">Follow us on Instagram <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
-          <span class="community-card-decoration" aria-hidden="true">✳</span>
-        </a>
-        <a href="https://www.roblox.com/groups/GANTI-ID-GROUP" target="_blank" rel="noopener noreferrer" class="community-link community-roblox group">
-          <span class="community-card-top"><span class="community-icon roblox-icon" aria-label="Logo Roblox"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" fill="currentColor"><path d="M5.08 1.8 22.2 5.08 18.92 22.2 1.8 18.92 5.08 1.8Zm3.53 5.4-1.2 6.27 6.27 1.2 1.2-6.27-6.27-1.2Z" transform="rotate(10 12 12)"/></svg></span><span class="community-external"><i data-lucide="arrow-up-right" class="w-5 h-5"></i></span></span>
-          <span class="community-platform">PLAY • CREATE</span>
-          <strong class="community-card-title">Roblox <span>Group</span></strong>
-          <span class="community-card-description">Discover Karis Studio experiences, projects, and activities on Roblox.</span>
-          <span class="community-card-action">Explore our Roblox <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
-          <span class="community-card-decoration" aria-hidden="true">◈</span>
-        </a>
-        <a href="https://www.tiktok.com/@GANTI-USERNAME-KARIS-STUDIO" target="_blank" rel="noopener noreferrer" class="community-link community-tiktok group">
-          <span class="community-card-top"><span class="community-icon tiktok-icon" aria-label="Logo TikTok"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.55v13.67a2.9 2.9 0 0 1-2.9 2.9 2.9 2.9 0 1 1 2.9-2.9c0-.22-.02-.43-.05-.64V11.4a6.48 6.48 0 0 0-2.85-.66 6.46 6.46 0 1 0 6.46 6.46V10.2a8.3 8.3 0 0 0 4.86 1.56V8.2a4.85 4.85 0 0 1-1.1-.13Z"/></svg></span><span class="community-external"><i data-lucide="arrow-up-right" class="w-5 h-5"></i></span></span>
-          <span class="community-platform">WATCH • CREATE</span>
-          <strong class="community-card-title">TikTok <span>Channel</span></strong>
-          <span class="community-card-description">Watch short videos, project previews, and fun moments from Karis Studio.</span>
-          <span class="community-card-action">Follow us on TikTok <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
-          <span class="community-card-decoration" aria-hidden="true">▶</span>
-        </a>
-      </div>
-      <div class="community-bottom-note"><span class="community-note-icon"><i data-lucide="heart-handshake" class="w-5 h-5"></i></span><span><strong><a href="https://karis.info" target="_blank" rel="noopener noreferrer">https://karis.info</a></strong><small>Connect, share ideas, and create with Karis Studio.</small></span><span class="community-note-sparkle">✦</span></div>
-    </div>
-    <div class="community-bottom-note"><span class="community-note-icon"><i data-lucide="clipboard-list" class="w-5 h-5"></i></span><span><strong><a href="https://karis.info" target="_blank" rel="noopener noreferrer">https://karis.booking</a></strong><small>Tell us your idea, and let’s bring it to life with Karis Studio.</small></span><span class="community-note-sparkle">✦</span></div>
-      <p class="text-center text-xs text-slate-400 mt-5">Note: replace the example URLs in the <code>href</code> attributes with your official community links.</p>
-    </div>
+            0%,
+            100% {
+                translate: 0 0
+            }
+
+            50% {
+                translate: 0 -5px
+            }
+        }
+
+        @keyframes contactSpin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes contactDrift {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0)
+            }
+
+            50% {
+                transform: translateY(-12px) rotate(8deg)
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            .animate-\[contactBob_4s_ease-in-out_infinite\],
+            .after\:animate-\[contactSpin_24s_linear_infinite\],
+            .animate-\[contactDrift_5s_ease-in-out_infinite\] {
+                animation: none !important;
+                transition: none !important
+            }
+        }
+    </style>
 </section>

@@ -307,7 +307,7 @@
     position: relative;
     font-size: clamp(2.5rem, 5vw, 4rem) !important;
     line-height: 1.04;
-    background: linear-gradient(100deg, #2f7f7f 5%, #00b3a4 52%, #ed78b4 100%);
+    background: #a5185f;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent !important

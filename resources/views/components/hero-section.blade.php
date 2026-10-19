@@ -6,7 +6,7 @@
       radial-gradient(ellipse at 7% 18%, rgba(246, 187, 213, .88) 0%, rgba(246, 187, 213, 0) 34%),
       radial-gradient(ellipse at 85% 12%, rgba(127, 213, 213, .72) 0%, rgba(127, 213, 213, 0) 38%),
       radial-gradient(ellipse at 62% 100%, rgba(217, 244, 232, .95) 0%, rgba(217, 244, 232, 0) 43%),
-      linear-gradient(125deg, #F9F3F4 0%, #FCE7F3 43%, #E0F7FA 72%, #E6FFF5 100%);
+      linear-gradient(180deg, #F9F3F4 0%, #FCE7F3 43%, #E0F7FA 72%, #E6FFF5 100%);
   }
 
   .hero-roblox-art-wrap {
@@ -109,8 +109,8 @@
     background-image: radial-gradient(rgba(38, 159, 154, .23) 1.3px, transparent 1.5px);
     background-size: 25px 25px;
     opacity: .28;
-    -webkit-mask-image: linear-gradient(115deg, #000 0%, transparent 52%, #000 100%);
-    mask-image: linear-gradient(115deg, #000 0%, transparent 52%, #000 100%);
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 52%, #000 100%);
+    mask-image: linear-gradient(180deg, #000 0%, transparent 52%, #000 100%);
   }
 
   #home::after {
@@ -244,7 +244,7 @@
     overflow: hidden;
     border-radius: 28px;
     padding: 7px;
-    background: linear-gradient(145deg, rgba(255, 255, 255, .96), rgba(255, 238, 249, .9));
+    background: linear-gradient(180deg, rgba(255, 255, 255, .96), rgba(255, 238, 249, .9));
     border: 2px solid rgba(255, 255, 255, .95);
     box-shadow: 0 0 0 1px rgba(127, 213, 213, .32), 0 12px 32px rgba(38, 159, 154, .18), 0 0 24px rgba(246, 187, 213, .42);
     animation: mascot-float 4.5s ease-in-out infinite;
@@ -348,12 +348,12 @@
         <h1
           class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-deep-teal tracking-tight leading-tight mb-4 font-['Baloo_2']">
           KARIS <br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-soft-blush via-pastel-pink to-aqua-sky">
+          <span class="text-transparent bg-clip-text bg-gradient-to-b from-soft-blush via-pastel-pink to-aqua-sky">
             STUDIO
           </span>
         </h1>
 
-        <p class="text-base sm:text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+        <p class="text-base sm:text-lg text-[raleway] text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
           Bring your ideas to life on Roblox! We help you create high-quality, creative Roblox games, maps, and
           experiences tailored to your vision.
         </p>
@@ -361,7 +361,7 @@
           <a href="#news"
             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-pastel-pink hover:bg-soft-blush text-white font-heading text-lg px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
             <i data-lucide="newspaper" class="w-5 h-5"></i>
-            Read News &rarr;
+            Contact Us &rarr;
           </a>
           <a href="#projects"
             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/80 hover:bg-white text-deep-teal border-2 border-mint-green font-heading text-lg px-8 py-3.5 rounded-full shadow-sm hover:shadow transition-all">

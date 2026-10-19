@@ -111,6 +111,24 @@
       }, 1200);
     });
   </script>
+  <script>
+    window.addEventListener("load", function () {
+  const intro = document.getElementById("karis-intro");
+  const progress = document.querySelector(".intro-progress");
+  
+  let width = 0;
+  const interval = setInterval(function () {
+    if (width >= 100) {
+      clearInterval(interval);
+      // Sembunyikan elemen intro setelah loading selesai
+      intro.classList.add("fade-out");
+    } else {
+      width += 10;
+      progress.style.width = width + "%";
+    }
+  }, 50);
+});
+  </script>
 
   <!-- Panggil Komponen Navbar -->
   @include('components.navbar')
