@@ -90,7 +90,7 @@
    <a class="text-[clamp(13px,1.15vw,21px)] text-[#62416d] no-underline transition-colors duration-200 hover:text-[#d3449a] max-lg:text-[13px] max-sm:text-[12px]" href="#news">
     News &amp; Articles
    </a>
-   <a class="text-[clamp(13px,1.15vw,21px)] text-[#62416d] no-underline transition-colors duration-200 hover:text-[#d3449a] max-lg:text-[13px] max-sm:text-[12px]" href="#contact">
+   <a class="text-[clamp(13px,1.15vw,21px)] text-[#62416d] no-underline transition-colors duration-200 hover:text-[#d3449a] max-lg:text-[13px] max-sm:text-[12px]" href="{{ route('contact.index') }}">
     Contact Us
    </a>
   </div>
