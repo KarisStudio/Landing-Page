@@ -37,29 +37,32 @@
                 </p>
             </div>
 
-            <!-- Alert Notifications -->
-            @if (session('success'))
-                <div data-alert
-                    class="mb-5 p-3.5 sm:p-4 bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-2xl text-xs font-medium flex items-center justify-between shadow-sm">
-                    <span>{{ session('success') }}</span>
-                    <button type="button" onclick="this.parentElement.remove()"
-                        class="font-bold text-emerald-500 ml-3">&times;</button>
-                </div>
-            @endif
+            <!-- Alert Notifications (Fallback jika tidak pakai AJAX) -->
+            <div id="alert-container">
+                @if (session('success'))
+                    <div data-alert
+                        class="mb-5 p-3.5 sm:p-4 bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-2xl text-xs font-medium flex items-center justify-between shadow-sm">
+                        <span>{{ session('success') }}</span>
+                        <button type="button" onclick="this.parentElement.remove()"
+                            class="font-bold text-emerald-500 ml-3">&times;</button>
+                    </div>
+                @endif
 
-            @if (session('error'))
-                <div data-alert
-                    class="mb-5 p-3.5 sm:p-4 bg-rose-50 border border-rose-200 text-rose-700 rounded-2xl text-xs font-medium flex items-center justify-between shadow-sm">
-                    <span>{{ session('error') }}</span>
-                    <button type="button" onclick="this.parentElement.remove()"
-                        class="font-bold text-rose-500 ml-3">&times;</button>
-                </div>
-            @endif
+                @if (session('error'))
+                    <div data-alert
+                        class="mb-5 p-3.5 sm:p-4 bg-rose-50 border border-rose-200 text-rose-700 rounded-2xl text-xs font-medium flex items-center justify-between shadow-sm">
+                        <span>{{ session('error') }}</span>
+                        <button type="button" onclick="this.parentElement.remove()"
+                            class="font-bold text-rose-500 ml-3">&times;</button>
+                    </div>
+                @endif
+            </div>
 
             <!-- Form Card -->
             <div
                 class="bg-white/80 backdrop-blur-md p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg border border-pink-100/60">
                 <form id="contact-form" action="{{ route('contact.send') }}" method="POST"
+                    onsubmit="sendToDiscordAjax(event)"
                     class="space-y-4 sm:space-y-5 font-['Raleway']">
                     @csrf
 
@@ -153,8 +156,7 @@
                     </div>
 
                     <p class="text-[10px] text-slate-400 text-center leading-tight mt-3 font-['Raleway'] px-2">
-                        When you submit, your email app will open with your booking details filled in. Your message will not
-                        be sent until you press Send in your email app.
+                        When you submit, your data will be sent directly to the Karis Studio team via Discord.
                     </p>
                 </form>
             </div>
@@ -165,4 +167,62 @@
             </div>
         </div>
     </section>
+
+    <!-- Script AJAX untuk Debugging langsung ke Console Browser (F12) -->
+    <script>
+    async function sendToDiscordAjax(event) {
+        event.preventDefault();
+
+        const form = document.getElementById('contact-form');
+        const formData = new FormData(form);
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const alertContainer = document.getElementById('alert-container');
+
+        // Ubah tombol jadi loading state
+        btnText.innerText = 'Sending to Discord...';
+        submitBtn.disabled = true;
+
+        try {
+            const response = await fetch("{{ route('contact.send') }}", {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    'Accept': 'application/json'
+                },
+                body: formData
+            });
+
+            const result = await response.json();
+
+            // CEK HASILNYA LANGSUNG DI CONSOLE BROWSER (Tekan F12)
+            console.log("=== DISCORD WEBHOOK RESPONSE ===", result);
+
+            if (response.ok && result.success) {
+                // Munculkan alert sukses di halaman
+                alertContainer.innerHTML = `
+                    <div class="mb-5 p-3.5 sm:p-4 bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-2xl text-xs font-medium flex items-center justify-between shadow-sm">
+                        <span>${result.message}</span>
+                        <button type="button" onclick="this.parentElement.remove()" class="font-bold text-emerald-500 ml-3">&times;</button>
+                    </div>
+                `;
+                form.reset(); // Kosongkan form
+            } else {
+                // Munculkan alert error di halaman
+                alertContainer.innerHTML = `
+                    <div class="mb-5 p-3.5 sm:p-4 bg-rose-50 border border-rose-200 text-rose-700 rounded-2xl text-xs font-medium flex items-center justify-between shadow-sm">
+                        <span>${result.message || 'Gagal mengirim ke Discord.'}</span>
+                        <button type="button" onclick="this.parentElement.remove()" class="font-bold text-rose-500 ml-3">&times;</button>
+                    </div>
+                `;
+            }
+        } catch (error) {
+            console.error("Network/System Error:", error);
+            alert('Terjadi kesalahan sistem atau jaringan.');
+        } finally {
+            btnText.innerText = 'Submit Booking';
+            submitBtn.disabled = false;
+        }
+    }
+    </script>
 @endsection
