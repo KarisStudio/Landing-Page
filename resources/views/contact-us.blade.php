@@ -83,13 +83,13 @@
                     <!-- Company name & Type of inquiry -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">Company name</label>
-                            <input type="text" name="company_name" placeholder="PT/Universitas"
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Company name *</label>
+                            <input type="text" name="company_name" required placeholder="PT/Universitas"
                                 class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-teal-500 transition placeholder-slate-300 font-['Raleway']">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">Type of inquiry</label>
-                            <select name="inquiry_type"
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Type of inquiry *</label>
+                            <select name="inquiry_type" required
                                 class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs text-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500 transition font-['Raleway'] bg-white">
                                 <option value="" disabled selected>How can we help?</option>
                                 <option value="Full Game Development">Full Game Development</option>
@@ -102,8 +102,8 @@
 
                     <!-- Estimated budget -->
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Estimated budget</label>
-                        <select name="budget"
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Estimated budget *</label>
+                        <select name="budget" required
                             class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs text-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500 transition font-['Raleway'] bg-white">
                             <option value="" disabled selected>Select your estimated budget</option>
                             <option value="Below Rp 5.000.000">Below Rp 5.000.000</option>
@@ -114,8 +114,8 @@
 
                     <!-- Project detail -->
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Project detail</label>
-                        <textarea name="project_detail" rows="4"
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Project detail *</label>
+                        <textarea name="project_detail" rows="4" required
                             placeholder="Tell us about your vision, target audience, or game references"
                             class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-teal-500 transition placeholder-slate-300 font-['Raleway']"></textarea>
                     </div>
@@ -132,13 +132,13 @@
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 pt-1">
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Preferred date</label>
-                                <input type="date" name="preferred_date" min="{{ date('Y-m-d') }}"
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Preferred date *</label>
+                                <input type="date" name="preferred_date" min="{{ date('Y-m-d') }}" required
                                     class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs text-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500 transition bg-white font-['Raleway']">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Preferred time (WIB)</label>
-                                <input type="time" name="preferred_time" list="time-options" step="900"
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Preferred time (WIB) *</label>
+                                <input type="time" name="preferred_time" list="time-options" step="900" required
                                     onchange="this.blur()"
                                     class="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-200 text-xs text-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500 transition bg-white font-['Raleway']">
                                 @include('partials.time-options')
