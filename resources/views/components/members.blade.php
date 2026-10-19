@@ -80,7 +80,7 @@
                         </a>
 
                         <!-- TikTok -->
-                        <a href="https://www.tiktok.com/@karis.studio7" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.tiktok.com/@karis.community?_r=1&_t=ZS-9AgykIZBf1C" target="_blank" rel="noopener noreferrer"
                            class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white border border-[#f0c9dc] text-[#000000] text-[11px] font-bold shadow-xs transition-all duration-200 hover:-translate-y-[2px] hover:bg-[#000000] hover:text-white hover:border-[#000000]"
                            title="TikTok">
                             <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.5.18-1.92 1.12-3.72 2.5-4.96 1.51-1.35 3.6-2.05 5.66-1.9v4.08c-.76-.08-1.53.14-2.14.61-.62.48-1.01 1.21-1.07 1.99-.09 1.18.73 2.29 1.91 2.45 1.05.15 2.13-.37 2.64-1.3.26-.47.38-1.03.37-1.58.02-3.83-.01-7.66.02-11.49z"/></svg>
