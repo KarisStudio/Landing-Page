@@ -798,7 +798,7 @@
                                     <span
                                         class="text-[9px] font-bold text-teal-200 tracking-wider uppercase bg-white/10 backdrop-blur-md px-2 py-0.5 rounded-md">{{ $project['category'] ?? 'SIMULATOR' }}</span>
                                     <h3 class="text-xl font-extrabold text-white font-['Baloo_2'] mt-1"
-                                        style="-webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);">{{ $project['title'] }}
+                                        >{{ $project['title'] }}
                                     </h3>
                                 </div>
                             </div>
