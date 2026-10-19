@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class ContactController extends Controller
 {
     public function sendToDiscord(Request $request)
     {
-        // 1. Validasi input disesuaikan dengan atribut name di Form Blade terbaru
+        // 1. Validasi input
         $validated = $request->validate([
             'full_name'      => 'required|string|max:255',
             'email'          => 'required|email|max:255',
@@ -21,13 +22,16 @@ class ContactController extends Controller
             'preferred_time' => 'nullable|date_format:H:i',
         ]);
 
-        $webhookUrl = config('services.discord.webhook_url');
+        $webhookUrl = env('DISCORD_WEBHOOK_URL');
 
         if (!$webhookUrl) {
+            if ($request->expectsJson()) {
+                return response()->json(['success' => false, 'message' => 'URL Discord Webhook belum dikonfigurasi di .env!'], 400);
+            }
             return back()->with('error', 'URL Discord Webhook belum dikonfigurasi di file .env!');
         }
 
-        // Format jam untuk tampilan di Embed (contoh: "14:30 WIB")
+        // Format jam untuk tampilan di Embed
         $formattedTime = !empty($validated['preferred_time']) ? $validated['preferred_time'] . ' WIB' : '-';
 
         // 2. Susun payload Discord Embed
@@ -86,17 +90,47 @@ class ContactController extends Controller
             ],
         ];
 
-        // 3. Kirim data ke Discord Webhook
+        // 3. Kirim ke Discord Webhook
         try {
-            $response = Http::post($webhookUrl, $discordPayload);
+            $response = Http::withoutVerifying()
+                ->timeout(10)
+                ->post($webhookUrl, $discordPayload);
 
-            if ($response->successful()) {
+            // Discord Webhook sukses mengembalikan status 204 (No Content)
+            if ($response->successful() || $response->status() == 204) {
+                if ($request->expectsJson()) {
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Booking berhasil dikirim ke Discord!',
+                        'discord_status' => $response->status()
+                    ]);
+                }
                 return back()->with('success', 'Booking berhasil dikirim! Tim Karis Studio akan segera menghubungi kamu.');
+            }
+
+            Log::error('Discord Webhook Error: ' . $response->body());
+
+            if ($request->expectsJson()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Gagal mengirim ke Discord.',
+                    'discord_status' => $response->status(),
+                    'error_body' => $response->body()
+                ], 400);
             }
 
             return back()->with('error', 'Gagal mengirim booking ke Discord. Response Code: ' . $response->status());
         } catch (\Exception $e) {
-            return back()->with('error', 'Terjadi kesalahan sistem: ' . $e->getMessage());
+            Log::error('Discord Webhook Exception: ' . $e->getMessage());
+
+            if ($request->expectsJson()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Terjadi kesalahan sistem: ' . $e->getMessage()
+                ], 500);
+            }
+
+            return back()->with('error', 'Terjadi kesalahan sistem atau jaringan: ' . $e->getMessage());
         }
     }
 }
