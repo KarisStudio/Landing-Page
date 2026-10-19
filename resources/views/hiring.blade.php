@@ -1,5 +1,51 @@
 @extends('layouts.app')
 
+@php
+    // =========================================================================
+    // KONTROL STATUS LOWONGAN KERJA (TANPA DATABASE)
+    // - Ubah 'is_open' => true  : Tombol "Apply" aktif & bisa diklik
+    // - Ubah 'is_open' => false : Tombol "Closed" disabled & tidak bisa diklik
+    // =========================================================================
+    $roles = [
+        [
+            'title'       => 'Roblox Builder',
+            'category'    => 'Environment Design',
+            'description' => 'Build polished environments, detailed maps, and immersive worlds that bring each project\'s vision to life.',
+            'icon'        => 'fa-cubes',
+            'icon_bg'     => 'bg-pink-100/80 text-pink-500',
+            'is_open'     => true, // Ubah ke false untuk menonaktifkan
+            'link'        => '#apply'
+        ],
+        [
+            'title'       => 'Roblox Scripter',
+            'category'    => 'Gameplay Systems',
+            'description' => 'Create reliable gameplay systems, interactive features, and smooth player experiences with clean Luau code.',
+            'icon'        => 'fa-code',
+            'icon_bg'     => 'bg-teal-100/80 text-teal-600',
+            'is_open'     => true, // Ubah ke false untuk menonaktifkan
+            'link'        => '#apply'
+        ],
+        [
+            'title'       => '3D Modeler',
+            'category'    => '3D Assets & Visual Design',
+            'description' => 'Design charming, game-ready 3D assets that match our art direction and make every world feel special.',
+            'icon'        => 'fa-shapes',
+            'icon_bg'     => 'bg-purple-100/80 text-purple-600',
+            'is_open'     => false, // Contoh: Loker sedang ditutup
+            'link'        => '#apply'
+        ],
+        [
+            'title'       => 'UI/UX Designer',
+            'category'    => 'UI Design & Player Experience',
+            'description' => 'Craft clear, playful interfaces and player-friendly flows for Roblox games, menus, shops, and HUDs.',
+            'icon'        => 'fa-pen-ruler',
+            'icon_bg'     => 'bg-amber-100/80 text-amber-600',
+            'is_open'     => true, // Ubah ke false untuk menonaktifkan
+            'link'        => '#apply'
+        ],
+    ];
+@endphp
+
 @section('content')
     <section
         class="min-h-screen py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-8 sm:space-y-10 relative overflow-hidden font-['Raleway']">
@@ -152,127 +198,47 @@
                 <p class="text-xs text-slate-400">Four ways to bring your talent into our worlds.</p>
             </div>
 
-            <!-- Role List -->
+            <!-- Dynamic Role List -->
             <div class="space-y-3.5">
-                <!-- Role 1: Roblox Builder -->
-                <div
-                    class="bg-white/80 backdrop-blur-sm p-4 sm:p-5 rounded-2xl border border-slate-200/70 hover:border-teal-300 transition shadow-sm hover:shadow flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div class="flex items-start gap-3.5">
-                        <div
-                            class="w-10 h-10 rounded-xl bg-pink-100/80 text-pink-500 flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-cubes text-base"></i>
-                        </div>
-                        <div class="space-y-1">
-                            <div class="flex flex-wrap items-center gap-2">
-                                <h3 class="text-base font-extrabold text-[#315F60] font-['Baloo_2']">Roblox Builder</h3>
-                                <span
-                                    class="bg-teal-50 text-teal-700 border border-teal-100 text-[9px] font-semibold px-2 py-0.5 rounded-full font-['Raleway']">
-                                    Environment Design
-                                </span>
+                @foreach ($roles as $role)
+                    <div
+                        class="bg-white/80 backdrop-blur-sm p-4 sm:p-5 rounded-2xl border border-slate-200/70 hover:border-teal-300 transition shadow-sm hover:shadow flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div class="flex items-start gap-3.5">
+                            <div
+                                class="w-10 h-10 rounded-xl {{ $role['icon_bg'] }} flex items-center justify-center shrink-0">
+                                <i class="fa-solid {{ $role['icon'] }} text-base"></i>
                             </div>
-                            <p class="text-xs text-slate-500 leading-relaxed font-['Raleway']">
-                                Build polished environments, detailed maps, and immersive worlds that bring each project's
-                                vision to life.
-                            </p>
+                            <div class="space-y-1">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <h3 class="text-base font-extrabold text-[#315F60] font-['Baloo_2']">{{ $role['title'] }}</h3>
+                                    <span
+                                        class="bg-teal-50 text-teal-700 border border-teal-100 text-[9px] font-semibold px-2 py-0.5 rounded-full font-['Raleway']">
+                                        {{ $role['category'] }}
+                                    </span>
+                                </div>
+                                <p class="text-xs text-slate-500 leading-relaxed font-['Raleway']">
+                                    {{ $role['description'] }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <a href="#apply"
-                        class="w-full sm:w-auto shrink-0 bg-slate-50 hover:bg-teal-500 hover:text-white text-slate-700 text-xs font-bold px-4 py-2 rounded-xl border border-slate-200/80 hover:border-teal-500 transition flex items-center justify-center gap-1.5 group font-['Raleway']">
-                        <span>Apply</span>
-                        <i
-                            class="fa-solid fa-arrow-up-right-from-square text-[10px] group-hover:translate-x-0.5 transition-transform"></i>
-                    </a>
-                </div>
 
-                <!-- Role 2: Roblox Scripter -->
-                <div
-                    class="bg-white/80 backdrop-blur-sm p-4 sm:p-5 rounded-2xl border border-slate-200/70 hover:border-teal-300 transition shadow-sm hover:shadow flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div class="flex items-start gap-3.5">
-                        <div
-                            class="w-10 h-10 rounded-xl bg-teal-100/80 text-teal-600 flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-code text-base"></i>
-                        </div>
-                        <div class="space-y-1">
-                            <div class="flex flex-wrap items-center gap-2">
-                                <h3 class="text-base font-extrabold text-[#315F60] font-['Baloo_2']">Roblox Scripter</h3>
-                                <span
-                                    class="bg-teal-50 text-teal-700 border border-teal-100 text-[9px] font-semibold px-2 py-0.5 rounded-full font-['Raleway']">
-                                    Gameplay Systems
-                                </span>
-                            </div>
-                            <p class="text-xs text-slate-500 leading-relaxed font-['Raleway']">
-                                Create reliable gameplay systems, interactive features, and smooth player experiences with
-                                clean Luau code.
-                            </p>
-                        </div>
+                        <!-- Kondisi Tombol: Apply (Bisa diklik) / Closed (Disabled) -->
+                        @if ($role['is_open'])
+                            <a href="{{ $role['link'] }}"
+                                class="w-full sm:w-auto shrink-0 bg-slate-50 hover:bg-teal-500 hover:text-white text-slate-700 text-xs font-bold px-4 py-2 rounded-xl border border-slate-200/80 hover:border-teal-500 transition flex items-center justify-center gap-1.5 group font-['Raleway']">
+                                <span>Apply</span>
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square text-[10px] group-hover:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        @else
+                            <button disabled
+                                class="w-full sm:w-auto shrink-0 bg-slate-100 text-slate-400 text-xs font-semibold px-4 py-2 rounded-xl border border-slate-200/60 cursor-not-allowed flex items-center justify-center gap-1.5 font-['Raleway'] opacity-70">
+                                <i class="fa-solid fa-lock text-[10px]"></i>
+                                <span>Closed</span>
+                            </button>
+                        @endif
                     </div>
-                    <a href="#apply"
-                        class="w-full sm:w-auto shrink-0 bg-slate-50 hover:bg-teal-500 hover:text-white text-slate-700 text-xs font-bold px-4 py-2 rounded-xl border border-slate-200/80 hover:border-teal-500 transition flex items-center justify-center gap-1.5 group font-['Raleway']">
-                        <span>Apply</span>
-                        <i
-                            class="fa-solid fa-arrow-up-right-from-square text-[10px] group-hover:translate-x-0.5 transition-transform"></i>
-                    </a>
-                </div>
-
-                <!-- Role 3: 3D Modeler -->
-                <div
-                    class="bg-white/80 backdrop-blur-sm p-4 sm:p-5 rounded-2xl border border-slate-200/70 hover:border-teal-300 transition shadow-sm hover:shadow flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div class="flex items-start gap-3.5">
-                        <div
-                            class="w-10 h-10 rounded-xl bg-purple-100/80 text-purple-600 flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-shapes text-base"></i>
-                        </div>
-                        <div class="space-y-1">
-                            <div class="flex flex-wrap items-center gap-2">
-                                <h3 class="text-base font-extrabold text-[#315F60] font-['Baloo_2']">3D Modeler</h3>
-                                <span
-                                    class="bg-teal-50 text-teal-700 border border-teal-100 text-[9px] font-semibold px-2 py-0.5 rounded-full font-['Raleway']">
-                                    3D Assets & Visual Design
-                                </span>
-                            </div>
-                            <p class="text-xs text-slate-500 leading-relaxed font-['Raleway']">
-                                Design charming, game-ready 3D assets that match our art direction and make every world feel
-                                special.
-                            </p>
-                        </div>
-                    </div>
-                    <a href="#apply"
-                        class="w-full sm:w-auto shrink-0 bg-slate-50 hover:bg-teal-500 hover:text-white text-slate-700 text-xs font-bold px-4 py-2 rounded-xl border border-slate-200/80 hover:border-teal-500 transition flex items-center justify-center gap-1.5 group font-['Raleway']">
-                        <span>Apply</span>
-                        <i
-                            class="fa-solid fa-arrow-up-right-from-square text-[10px] group-hover:translate-x-0.5 transition-transform"></i>
-                    </a>
-                </div>
-
-                <!-- Role 4: UI/UX Designer -->
-                <div
-                    class="bg-white/80 backdrop-blur-sm p-4 sm:p-5 rounded-2xl border border-slate-200/70 hover:border-teal-300 transition shadow-sm hover:shadow flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div class="flex items-start gap-3.5">
-                        <div
-                            class="w-10 h-10 rounded-xl bg-amber-100/80 text-amber-600 flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-pen-ruler text-base"></i>
-                        </div>
-                        <div class="space-y-1">
-                            <div class="flex flex-wrap items-center gap-2">
-                                <h3 class="text-base font-extrabold text-[#315F60] font-['Baloo_2']">UI/UX Designer</h3>
-                                <span
-                                    class="bg-teal-50 text-teal-700 border border-teal-100 text-[9px] font-semibold px-2 py-0.5 rounded-full font-['Raleway']">
-                                    UI Design & Player Experience
-                                </span>
-                            </div>
-                            <p class="text-xs text-slate-500 leading-relaxed font-['Raleway']">
-                                Craft clear, playful interfaces and player-friendly flows for Roblox games, menus, shops,
-                                and HUDs.
-                            </p>
-                        </div>
-                    </div>
-                    <a href="#apply"
-                        class="w-full sm:w-auto shrink-0 bg-slate-50 hover:bg-teal-500 hover:text-white text-slate-700 text-xs font-bold px-4 py-2 rounded-xl border border-slate-200/80 hover:border-teal-500 transition flex items-center justify-center gap-1.5 group font-['Raleway']">
-                        <span>Apply</span>
-                        <i
-                            class="fa-solid fa-arrow-up-right-from-square text-[10px] group-hover:translate-x-0.5 transition-transform"></i>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
 
