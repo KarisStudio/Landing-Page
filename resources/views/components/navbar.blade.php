@@ -3,7 +3,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 
     <!-- Logo -->
-    <a href="#" class="flex items-center gap-2 group">
+    <a href="{{ route('index') }}" class="flex items-center gap-2 group">
       <img src="./image/KARIS STUDIO LOGO .png" alt="Logo Karis" class="w-11 h-11 object-contain">
       <div class="flex flex-col">
         <span class="font-heading text-2xl font-bold text-[#2F7F7F] leading-none tracking-wide">KARIS</span>
