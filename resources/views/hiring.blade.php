@@ -13,7 +13,7 @@
             'description' => 'Build polished environments, detailed maps, and immersive worlds that bring each project\'s vision to life.',
             'icon'        => 'fa-cubes',
             'icon_bg'     => 'bg-pink-100/80 text-pink-500',
-            'is_open'     => true, // Ubah ke false untuk menonaktifkan
+            'is_open'     => false, // Ubah ke false untuk menonaktifkan
             'link'        => '#apply'
         ],
         [
