@@ -12,7 +12,7 @@
                 </div>
             </div>
             
-            <div>
+            <div class="bg-[#F5A6BA]/30 backdrop-blur-md p-3 rounded-2xl border border-white/30 mt-2 shadow-md">
                 <span class="text-[9px] font-bold text-teal-200 tracking-wider uppercase bg-white/10 backdrop-blur-md px-2 py-0.5 rounded-md">{{ $project['category'] }}</span>
                 <h3 class="text-xl font-extrabold text-white font-['Baloo_2'] mt-1">{{ $project['title'] }}</h3>
             </div>
