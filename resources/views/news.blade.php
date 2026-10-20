@@ -3,18 +3,15 @@
 @section('content')
 <section class="min-h-screen py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-8 font-['Raleway']">
 
-    <!-- Header Section -->
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-            <a href="{{ url('/') }}" class="inline-flex items-center gap-2 bg-teal-50 hover:bg-teal-100 text-[#17938b] font-bold px-4 py-2 rounded-full text-xs transition border border-teal-100">
+    
+    <!-- Top Back Navigation -->
+        <div class="z-10 relative">
+            <a href="{{ route('index') }}"
+                class="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-600 hover:text-teal-700 transition">
                 <i class="fa-solid fa-arrow-left text-[10px]"></i>
-                <span>Back ke Home</span>
+                <span>Back to Karis Studio</span>
             </a>
         </div>
-        <div class="text-xs text-slate-400 font-semibold">
-            &copy; Karis Studio &bull; News & Articles
-        </div>
-    </div>
 
     <!-- Grid News (1 Kolom Mobile, 2 Kolom Tablet/Desktop) -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 pt-4">
