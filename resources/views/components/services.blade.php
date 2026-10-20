@@ -143,44 +143,57 @@
 
         </div>
 
-        <!-- Section: Collaborated & Partnered With (12 Logos Marquee) -->
+        <!-- Section: Collaborated & Partnered With -->
         <div class="mt-[5rem] text-center">
             <h2 class="font-['Baloo_2'] text-[clamp(1.8rem,3.5vw,2.75rem)] font-extrabold leading-[1.12] tracking-[-0.035em] text-[#a5185f] mb-8">
                 Collaborated & Partnered with
             </h2>
 
-            <!-- Running Logo Slider Container (12 Logos) -->
+            <!-- Running Logo Slider Container -->
             <div class="w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-                <div class="flex w-max space-x-8 md:space-x-12 animate-[marquee_35s_linear_infinite]">
-                    <!-- Set Logo 1 (12 Logos) -->
+                <div class="flex w-max space-x-8 md:space-x-12 animate-[marquee_25s_linear_infinite]">
+                    <!-- Set Logo 1 (images/partnership) -->
                     <div class="flex items-center space-x-8 md:space-x-12 shrink-0">
-                        <img src="{{ asset('image/partner1.png') }}" alt="Partner Logo 1" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner2.png') }}" alt="Partner Logo 2" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner3.png') }}" alt="Partner Logo 3" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner4.png') }}" alt="Partner Logo 4" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner5.png') }}" alt="Partner Logo 5" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner6.png') }}" alt="Partner Logo 6" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner7.png') }}" alt="Partner Logo 7" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner8.png') }}" alt="Partner Logo 8" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner9.png') }}" alt="Partner Logo 9" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner10.png') }}" alt="Partner Logo 10" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner11.png') }}" alt="Partner Logo 11" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner12.png') }}" alt="Partner Logo 12" class="h-12 md:h-16 object-contain pointer-events-none">
+                        <div class="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center">
+                            <img src="{{ asset('images/partnership/logo.jpg') }}" alt="Partner Logo 1" class="max-w-full max-h-full object-contain pointer-events-none">
+                        </div>
+                        <div class="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center">
+                            <img src="{{ asset('images/partnership/logo2.jpg') }}" alt="Partner Logo 2" class="max-w-full max-h-full object-contain pointer-events-none">
+                        </div>
+                        <div class="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center">
+                            <img src="{{ asset('images/partnership/logo3.jpg') }}" alt="Partner Logo 3" class="max-w-full max-h-full object-contain pointer-events-none">
+                        </div>
+                        <div class="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center">
+                            <img src="{{ asset('images/partnership/logo4.jpg') }}" alt="Partner Logo 4" class="max-w-full max-h-full object-contain pointer-events-none">
+                        </div>
+                        <div class="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center">
+                            <img src="{{ asset('images/partnership/logo5.png') }}" alt="Partner Logo 5" class="max-w-full max-h-full object-contain pointer-events-none">
+                        </div>
+                        <div class="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center">
+                            <img src="{{ asset('images/partnership/logo6.jpg') }}" alt="Partner Logo 6" class="max-w-full max-h-full object-contain pointer-events-none">
+                        </div>
                     </div>
+
                     <!-- Set Logo 2 (Duplicate for seamless infinite looping) -->
                     <div class="flex items-center space-x-8 md:space-x-12 shrink-0">
-                        <img src="{{ asset('image/partner1.png') }}" alt="Partner Logo 1" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner2.png') }}" alt="Partner Logo 2" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner3.png') }}" alt="Partner Logo 3" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner4.png') }}" alt="Partner Logo 4" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner5.png') }}" alt="Partner Logo 5" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner6.png') }}" alt="Partner Logo 6" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner7.png') }}" alt="Partner Logo 7" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner8.png') }}" alt="Partner Logo 8" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner9.png') }}" alt="Partner Logo 9" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner10.png') }}" alt="Partner Logo 10" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner11.png') }}" alt="Partner Logo 11" class="h-12 md:h-16 object-contain pointer-events-none">
-                        <img src="{{ asset('image/partner12.png') }}" alt="Partner Logo 12" class="h-12 md:h-16 object-contain pointer-events-none">
+                        <div class="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center">
+                            <img src="{{ asset('images/partnership/logo.jpg') }}" alt="Partner Logo 1" class="max-w-full max-h-full object-contain pointer-events-none">
+                        </div>
+                        <div class="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center">
+                            <img src="{{ asset('images/partnership/logo2.jpg') }}" alt="Partner Logo 2" class="max-w-full max-h-full object-contain pointer-events-none">
+                        </div>
+                        <div class="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center">
+                            <img src="{{ asset('images/partnership/logo3.jpg') }}" alt="Partner Logo 3" class="max-w-full max-h-full object-contain pointer-events-none">
+                        </div>
+                        <div class="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center">
+                            <img src="{{ asset('images/partnership/logo4.jpg') }}" alt="Partner Logo 4" class="max-w-full max-h-full object-contain pointer-events-none">
+                        </div>
+                        <div class="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center">
+                            <img src="{{ asset('images/partnership/logo5.png') }}" alt="Partner Logo 5" class="max-w-full max-h-full object-contain pointer-events-none">
+                        </div>
+                        <div class="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center">
+                            <img src="{{ asset('images/partnership/logo6.jpg') }}" alt="Partner Logo 6" class="max-w-full max-h-full object-contain pointer-events-none">
+                        </div>
                     </div>
                 </div>
             </div>
