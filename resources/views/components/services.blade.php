@@ -155,44 +155,44 @@
                     <!-- Set Logo 1 (images/partnership) -->
                     <div class="flex items-center space-x-12 md:space-x-16 shrink-0">
                         <div class="w-52 h-28 md:w-64 md:h-36 flex items-center justify-center p-2">
-                            <img src="{{ asset('images/partnership/logo.jpg') }}" alt="Partner Logo 1" class="max-w-full max-h-full object-contain pointer-events-none">
+                            <img src="{{ asset('images/partnership/logo.png') }}" alt="Partner Logo 1" class="max-w-full max-h-full object-contain pointer-events-none">
                         </div>
                         <div class="w-52 h-28 md:w-64 md:h-36 flex items-center justify-center p-2">
-                            <img src="{{ asset('images/partnership/logo2.jpg') }}" alt="Partner Logo 2" class="max-w-full max-h-full object-contain pointer-events-none">
+                            <img src="{{ asset('images/partnership/logo2.png') }}" alt="Partner Logo 2" class="max-w-full max-h-full object-contain pointer-events-none">
                         </div>
                         <div class="w-52 h-28 md:w-64 md:h-36 flex items-center justify-center p-2">
-                            <img src="{{ asset('images/partnership/logo3.jpg') }}" alt="Partner Logo 3" class="max-w-full max-h-full object-contain pointer-events-none">
+                            <img src="{{ asset('images/partnership/logo3.png') }}" alt="Partner Logo 3" class="max-w-full max-h-full object-contain pointer-events-none">
                         </div>
                         <div class="w-52 h-28 md:w-64 md:h-36 flex items-center justify-center p-2">
-                            <img src="{{ asset('images/partnership/logo4.jpg') }}" alt="Partner Logo 4" class="max-w-full max-h-full object-contain pointer-events-none">
+                            <img src="{{ asset('images/partnership/logo4.png') }}" alt="Partner Logo 4" class="max-w-full max-h-full object-contain pointer-events-none">
                         </div>
                         <div class="w-52 h-28 md:w-64 md:h-36 flex items-center justify-center p-2">
                             <img src="{{ asset('images/partnership/logo5.png') }}" alt="Partner Logo 5" class="max-w-full max-h-full object-contain pointer-events-none">
                         </div>
                         <div class="w-52 h-28 md:w-64 md:h-36 flex items-center justify-center p-2">
-                            <img src="{{ asset('images/partnership/logo6.jpg') }}" alt="Partner Logo 6" class="max-w-full max-h-full object-contain pointer-events-none">
+                            <img src="{{ asset('images/partnership/logo6.png') }}" alt="Partner Logo 6" class="max-w-full max-h-full object-contain pointer-events-none">
                         </div>
                     </div>
 
                     <!-- Set Logo 2 (Duplicate for seamless infinite looping) -->
                     <div class="flex items-center space-x-12 md:space-x-16 shrink-0">
                         <div class="w-52 h-28 md:w-64 md:h-36 flex items-center justify-center p-2">
-                            <img src="{{ asset('images/partnership/logo.jpg') }}" alt="Partner Logo 1" class="max-w-full max-h-full object-contain pointer-events-none">
+                            <img src="{{ asset('images/partnership/logo.png') }}" alt="Partner Logo 1" class="max-w-full max-h-full object-contain pointer-events-none">
                         </div>
                         <div class="w-52 h-28 md:w-64 md:h-36 flex items-center justify-center p-2">
-                            <img src="{{ asset('images/partnership/logo2.jpg') }}" alt="Partner Logo 2" class="max-w-full max-h-full object-contain pointer-events-none">
+                            <img src="{{ asset('images/partnership/logo2.png') }}" alt="Partner Logo 2" class="max-w-full max-h-full object-contain pointer-events-none">
                         </div>
                         <div class="w-52 h-28 md:w-64 md:h-36 flex items-center justify-center p-2">
-                            <img src="{{ asset('images/partnership/logo3.jpg') }}" alt="Partner Logo 3" class="max-w-full max-h-full object-contain pointer-events-none">
+                            <img src="{{ asset('images/partnership/logo3.png') }}" alt="Partner Logo 3" class="max-w-full max-h-full object-contain pointer-events-none">
                         </div>
                         <div class="w-52 h-28 md:w-64 md:h-36 flex items-center justify-center p-2">
-                            <img src="{{ asset('images/partnership/logo4.jpg') }}" alt="Partner Logo 4" class="max-w-full max-h-full object-contain pointer-events-none">
+                            <img src="{{ asset('images/partnership/logo4.png') }}" alt="Partner Logo 4" class="max-w-full max-h-full object-contain pointer-events-none">
                         </div>
                         <div class="w-52 h-28 md:w-64 md:h-36 flex items-center justify-center p-2">
                             <img src="{{ asset('images/partnership/logo5.png') }}" alt="Partner Logo 5" class="max-w-full max-h-full object-contain pointer-events-none">
                         </div>
                         <div class="w-52 h-28 md:w-64 md:h-36 flex items-center justify-center p-2">
-                            <img src="{{ asset('images/partnership/logo6.jpg') }}" alt="Partner Logo 6" class="max-w-full max-h-full object-contain pointer-events-none">
+                            <img src="{{ asset('images/partnership/logo6.png') }}" alt="Partner Logo 6" class="max-w-full max-h-full object-contain pointer-events-none">
                         </div>
                     </div>
                 </div>
