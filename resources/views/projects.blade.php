@@ -6,6 +6,15 @@
         x-data="projectModal()">
 
         <!-- Header Section -->
+
+        <!-- Top Back Navigation -->
+        <div class="z-10 relative">
+            <a href="{{ route('index') }}"
+                class="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-600 hover:text-teal-700 transition">
+                <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                <span>Back to Karis Studio</span>
+            </a>
+        </div>
         <div class="space-y-2">
             <span class="text-[10px] font-extrabold text-[#23a099] uppercase tracking-[0.2em]">
                 KARIS / PROJECT ARCHIVE
